@@ -1,0 +1,31 @@
+{
+  "disclaimer": "This website is for demonstration and informational purposes only. It does not constitute an offer of services, a commitment to deploy, or a guarantee of outcomes. All statistics, projections, and references to specific technologies are based on publicly available information as of the date shown and are subject to change.",
+  "trustPoints": [
+    "Premium Keyword .com Domain",
+    "Second Quantum Revolution Brand",
+    "Escrow.com Protected Transfer",
+    "Strategic Category Asset"
+  ],
+  "useCaseCategories": [
+    {
+      "title": "Quantum Hardware & Software Companies",
+      "description": "Own the education and narrative layer. Position your company as the trusted voice explaining quantum progress to customers, investors, and policymakers."
+    },
+    {
+      "title": "EdTech & Deep-Tech Media Platforms",
+      "description": "Build the definitive destination for quantum literacy. Perfect for premium podcast networks, online academies, or micro-credential platforms."
+    },
+    {
+      "title": "Universities & Research Consortia",
+      "description": "Launch a flagship public or professional education program. The ideal branded home for quantum science communication at scale."
+    },
+    {
+      "title": "Investors, Accelerators & Government Initiatives",
+      "description": "Establish a high-signal branded platform for market intelligence, thought leadership, and ecosystem-building in the quantum sector."
+    },
+    {
+      "title": "Individual Creators & Small Teams",
+      "description": "Build the definitive quantum podcast, lecture series, or knowledge hub. Scale from a single show into a full media or education business."
+    }
+  ]
+}
