@@ -30,7 +30,7 @@
   }
 
   .section-header {
-    @apply text-[3.25rem] leading-[1.05] font-bold tracking-[-0.04em];
+    @apply text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] leading-[1.05] font-bold tracking-[-0.04em];
   }
 
   .quantum-gradient {
@@ -61,7 +61,18 @@
     background-image: linear-gradient(rgba(8, 8, 28, 0.65), rgba(8, 8, 28, 0.88)), url('https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/2347a163-c5e4-4ade-c940-5d1c243d2700/public');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+  }
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    .hero-bg {
+      background-attachment: scroll;
+    }
+  }
+
+  @supports not (-webkit-overflow-scrolling: touch) {
+    .hero-bg {
+      background-attachment: fixed;
+    }
   }
 
   .reason-card {
