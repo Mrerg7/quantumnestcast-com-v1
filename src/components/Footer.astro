@@ -29,10 +29,19 @@ const year = new Date().getFullYear();
             Serious buyers and strategic acquirers: connect directly for confidential terms,
             transfer logistics, and flexible closing options. One premium asset. One point of contact.
           </p>
-          <p class="mt-6 font-mono text-sm text-cyan-300">
+          <p class="mt-6 flex flex-wrap items-center gap-3 font-mono text-sm text-cyan-300">
             <a href={ACQUISITION_MAILTO} class="hover:text-white transition-colors no-underline">
               {SITE.acquisitionEmail}
             </a>
+            <button
+              type="button"
+              id="copy-email"
+              data-email={SITE.acquisitionEmail}
+              class="inline-flex items-center gap-x-1.5 rounded-full border border-cyan-400/40 px-3 py-1 text-xs font-sans font-semibold text-cyan-300 hover:bg-cyan-400/10 hover:text-cyan-200 transition-colors cursor-pointer"
+            >
+              <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              <span id="copy-email-label">Copy email</span>
+            </button>
           </p>
         </div>
 
@@ -66,4 +75,24 @@ const year = new Date().getFullYear();
       </div>
     </div>
   </div>
-</footer>
+  </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copy-email');
+    const copyLabel = document.getElementById('copy-email-label');
+    if (copyBtn && copyLabel) {
+      copyBtn.addEventListener('click', async () => {
+        const email = copyBtn.getAttribute('data-email') || '';
+        try {
+          await navigator.clipboard.writeText(email);
+          copyLabel.textContent = 'Copied!';
+          setTimeout(() => {
+            copyLabel.textContent = 'Copy email';
+          }, 2000);
+        } catch {
+          window.location.href = `mailto:${email}`;
+        }
+      });
+    }
+  </script>
+

@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
   <head>
     <SEO title={title} description={description} path={Astro.url.pathname} />
   </head>
-  <body class="overflow-x-hidden">
+  <body class="overflow-x-hidden pb-16 md:pb-0">
     <slot />
   </body>
 </html>
